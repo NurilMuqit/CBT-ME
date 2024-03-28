@@ -33,9 +33,17 @@
                                     <th>Jumlah Soal</th>
                                     <th>: {{ $ujian->detailessay->count() }} Soal</th>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                     <th>Waktu Ujian</th>
                                     <th>: {{ $ujian->jam }} Jam {{ $ujian->menit }} Menit</th>
+                                </tr> --}}
+                                <tr>
+                                    <th>Waktu Mulai</th>
+                                    <th>: {{ $ujian->mulai }} </th>
+                                </tr>
+                                <tr>
+                                    <th>Waktu Selesai</th>
+                                    <th>: {{ $ujian->selesai }}</th>
                                 </tr>
                             </table>
                         </div>
@@ -54,7 +62,7 @@
                                     <div class="badge badge-primary" style="font-size: 18px; font-weight: bold;"><span
                                             data-feather="clock"></span> | <span class="jam_skrng">00 : 00 : 00</span></div>
                                 </div>
-                                <div>
+                                <>
                                     @php
                                         $no = 1;
                                         $soal_hidden = '';
@@ -95,20 +103,25 @@
 {{ $soal->jawaban }}
 @endif
 </textarea>
-                                                        <input type="file" name="{{ $soal->detailessay->id }}" data-alternateName="{{ $soal->detailessay->id }}"
-                                                        data-alternateValue="{{ $no }}" id="soal{{ $no }}-{{ $soal->detailessay->id }}"
-                                                        data-essay_siswa="{{ $soal->id }}" data-noSoal="{{ $no }}" class="form-control">
+                                                        <input type="file" name="{{ $soal->detailessay->id }}"
+                                                            data-alternateName="{{ $soal->detailessay->id }}"
+                                                            data-alternateValue="{{ $no }}"
+                                                            id="soal{{ $no }}-{{ $soal->detailessay->id }}"
+                                                            data-essay_siswa="{{ $soal->id }}"
+                                                            data-noSoal="{{ $no }}" class="form-control">
                                                     </div>
                                                 </div>
                                             </div>
 
                                         </div>
 
+
                                         @php
                                             $soal_hidden = 'hidden';
                                             $no++;
                                         @endphp
                                     @endforeach
+                                
                                 </div>
                                 <!-- SOAL -->
 
@@ -153,12 +166,19 @@
                                             $hidden = '';
                                         @endphp
                                         @foreach ($essay_siswa as $soal)
-                                            {{-- <div class="question {{ $hidden }} question-{{ $no }} ragus ragus-{{ $no }}" data-question="{{ $no }}">
+                                            <div class="question {{ $hidden }} question-{{ $no }} ragus ragus-{{ $no }}"
+                                                data-question="{{ $no }}">
                                                 <a href="javascript:void(0);" class="btn btn-warning">
-                                                    <input type="checkbox" class="ragu" id="ragu{{ $soal->detailessay->id }}" data-id_essay="{{ $soal->id }}" data-mark_name="{{ $soal->detailessay->id }}" data-question="{{ $no }}" @if ($soal->ragu !== null) checked @endif>
-                                                    <label for="ragu{{ $soal->detailessay->id }}" class="mb-0 text-white">Ragu - Ragu</label>
+                                                    <input type="checkbox" class="ragu"
+                                                        id="ragu{{ $soal->detailessay->id }}"
+                                                        data-id_essay="{{ $soal->id }}"
+                                                        data-mark_name="{{ $soal->detailessay->id }}"
+                                                        data-question="{{ $no }}"
+                                                        @if ($soal->ragu !== null) checked @endif>
+                                                    <label for="ragu{{ $soal->detailessay->id }}"
+                                                        class="mb-0 text-white">Ragu - Ragu</label>
                                                 </a>
-                                            </div> --}}
+                                            </div>
                                             @php
                                                 $no++;
                                                 $hidden = 'hidden';
@@ -195,13 +215,16 @@
                                         $no++;
                                     @endphp
                                 @endforeach
-                                {{-- <div class="mt-3">
-                                    <span class="badge badge-info text-info" style="padding: 0px 6px;">-</span> = Sudah dikerjakan
+                                <div class="mt-3">
+                                    <span class="badge badge-info text-info" style="padding: 0px 6px;">-</span> = Sudah
+                                    dikerjakan
                                     <br>
-                                    <span class="badge badge-warning text-warning" style="padding: 0px 6px;">-</span> = Ragu - Ragu
+                                    <span class="badge badge-warning text-warning" style="padding: 0px 6px;">-</span> =
+                                    Ragu - Ragu
                                     <br>
-                                    <span class="badge btn-white" style="color: #cacaca; padding: 0px 6px;">-</span> = Belum dikerjakan
-                                </div> --}}
+                                    <span class="badge btn-white" style="color: #cacaca; padding: 0px 6px;">-</span> =
+                                    Belum dikerjakan
+                                </div>
                             </div>
                         </div>
                         <div class="widget shadow p-3 mt-3">
@@ -356,12 +379,12 @@
         @include('template.footer')
     </div>
     <script>
-        document.addEventListener("visibilitychange", function() {
-            if (document.visibilityState === 'hidden') {
-                // Pengguna telah beralih tab
-                alert("udeeh apa bikin dek")
-            }
-        });
+        // document.addEventListener("visibilitychange", function() {
+        //     if (document.visibilityState === 'hidden') {
+        //         // Pengguna telah beralih tab
+        //         alert("udeeh apa bikin dek")
+        //     }
+        // });
     </script>
     <!--  END CONTENT AREA  -->
     {!! session('pesan') !!}

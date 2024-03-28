@@ -63,6 +63,7 @@ Route::get('/register', [AuthController::class, 'register']);
 Route::get('/recovery', [AuthController::class, 'recovery']);
 Route::get('/change_password/{token:token}', [AuthController::class, 'change_password']);
 Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/auth', [AuthController::class,'auth']);
 // ==>Function
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/install', [AuthController::class, 'install_']);

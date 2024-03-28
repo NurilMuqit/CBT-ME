@@ -23,13 +23,13 @@
                                     <th>Jumlah Soal</th>
                                     <th>: {{ $ujian->detailujian->count() }} Soal</th>
                                 </tr>
-                                <tr>
+                                {{-- <tr>
                                     <th>Waktu Ujian</th>
                                     <th>: {{ $ujian->jam }} Jam {{ $ujian->menit }} Menit</th>
                                 </tr>
-                                <tr>
-                                    <th>Waktu Mulai</th>
-                                    <th>: {{ $ujian->mulai }}</th>
+                                <tr> --}}
+                                <th>Waktu Mulai</th>
+                                <th>: {{ $ujian->mulai }}</th>
                                 </tr>
                                 <tr>
                                     <th>Waktu Selesai</th>

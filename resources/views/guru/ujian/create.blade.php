@@ -50,7 +50,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    {{-- <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="">Waktu Jam</label>
                                             <input type="number" name="jam" class="form-control" value="0"
@@ -63,7 +63,7 @@
                                             <input type="number" name="menit" class="form-control" value="0"
                                                 required>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="">Waktu Mulai</label>

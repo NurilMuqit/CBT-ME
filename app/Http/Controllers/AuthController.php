@@ -515,4 +515,8 @@ class AuthController extends Controller
 
         return redirect('/');
     }
+    public function auth(Request $request){
+        $request->session()->get('id');
+        $request->session()->get('role');
+    }
 }

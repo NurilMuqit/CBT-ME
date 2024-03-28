@@ -87,7 +87,7 @@
                     </div>
                     <div class="modal-body text-center">
                         <a href="{{ url('/guru/ujian/create') }}" class="btn btn-primary">Pilihan Ganda</a>
-                        {{-- <a href="{{ url('/guru/ujian_essay') }}" class="btn btn-primary ml-2">Essay</a> --}}
+                        <a href="{{ url('/guru/ujian_essay') }}" class="btn btn-primary ml-2">Essay</a>
                     </div>
                     <div class="modal-footer">
                         <button type="reset" value="reset" class="btn" data-dismiss="modal"><i

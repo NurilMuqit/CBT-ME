@@ -36,7 +36,7 @@
                     </div>
                 </a>
             </li> --}}
-            <li class="menu {{ $menu['menu'] == 'tugas' ? 'active' : '' }}">
+            {{-- <li class="menu {{ $menu['menu'] == 'tugas' ? 'active' : '' }}">
                 <a href="{{ url('/siswa/tugas') }}"
                     aria-expanded="{{ $menu['expanded'] == 'tugas' ? 'true' : 'false' }}" class="dropdown-toggle">
                     <div class="">
@@ -44,13 +44,13 @@
                         <span>Ujian Essay</span>
                     </div>
                 </a>
-            </li>
+            </li> --}}
             <li class="menu {{ $menu['menu'] == 'ujian' ? 'active' : '' }}">
                 <a href="{{ url('/siswa/ujian') }}"
                     aria-expanded="{{ $menu['expanded'] == 'ujian' ? 'true' : 'false' }}" class="dropdown-toggle">
                     <div class="">
                         <span data-feather="cast"></span>
-                        <span>Ujian Pg</span>
+                        <span>Ujian</span>
                     </div>
                 </a>
             </li>
