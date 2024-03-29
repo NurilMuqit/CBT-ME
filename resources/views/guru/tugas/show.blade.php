@@ -108,7 +108,7 @@
 
                             <div id="toggleAccordion">
                                 <div class="card">
-                                    <div class="card-header" id="...">
+                                    {{-- <div class="card-header" id="...">
                                         <section class="mb-0 mt-0">
                                             <div role="menu" class="collapsed" data-toggle="collapse"
                                                 data-target="#defaultAccordionOne" aria-expanded="true"
@@ -136,7 +136,7 @@
                                             aria-label="Tulis komentar / chat" rows="1" wrap="hard"></textarea>
                                         <button id="chat_tugas" class="btn btn-primary mt-2 d-flex ml-auto"
                                             type="button">Kirim</button>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -158,8 +158,7 @@
                             </div>
 
 
-                            <div id="TugasSiswa" class="collapse show" aria-labelledby="..."
-                                data-parent="#tugasAccordion">
+                            <div id="TugasSiswa" class="collapse show" aria-labelledby="..." data-parent="#tugasAccordion">
                                 <div class="card-body">
                                     <a href="{{ url('/guru/tugas_cetak/' . $tugas->kode) }}" class="btn btn-info btn-sm"
                                         target="_blank"><span data-feather="printer"></span> Cetak</a>

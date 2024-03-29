@@ -13,8 +13,7 @@
         <div class="shadow-bottom"></div>
         <ul class="list-unstyled menu-categories" id="accordionExample">
             <li class="menu {{ $menu['menu'] == 'dashboard' ? 'active' : '' }}">
-                <a href="{{ url('/siswa') }}"
-                    aria-expanded="{{ $menu['expanded'] == 'dashboard' ? 'true' : 'false' }}"
+                <a href="{{ url('/siswa') }}" aria-expanded="{{ $menu['expanded'] == 'dashboard' ? 'true' : 'false' }}"
                     class="dropdown-toggle">
                     <div class="">
                         <span data-feather="airplay"></span>
@@ -36,7 +35,7 @@
                     </div>
                 </a>
             </li> --}}
-            {{-- <li class="menu {{ $menu['menu'] == 'tugas' ? 'active' : '' }}">
+            <li class="menu {{ $menu['menu'] == 'tugas' ? 'active' : '' }}">
                 <a href="{{ url('/siswa/tugas') }}"
                     aria-expanded="{{ $menu['expanded'] == 'tugas' ? 'true' : 'false' }}" class="dropdown-toggle">
                     <div class="">
@@ -44,13 +43,13 @@
                         <span>Ujian Essay</span>
                     </div>
                 </a>
-            </li> --}}
+            </li>
             <li class="menu {{ $menu['menu'] == 'ujian' ? 'active' : '' }}">
                 <a href="{{ url('/siswa/ujian') }}"
                     aria-expanded="{{ $menu['expanded'] == 'ujian' ? 'true' : 'false' }}" class="dropdown-toggle">
                     <div class="">
                         <span data-feather="cast"></span>
-                        <span>Ujian</span>
+                        <span>Ujian PG</span>
                     </div>
                 </a>
             </li>

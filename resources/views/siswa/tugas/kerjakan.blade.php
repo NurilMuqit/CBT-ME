@@ -31,18 +31,20 @@
                                 </tr>
                             </table>
                             <hr>
-
+                            <div style="overflow-wrap: break-word;">
+                                {!! $tugas_siswa->tugas->teks !!}
+                            </div>
                             <form action="{{ url('/siswa/tugas/' . $tugas_siswa->kode) }}" method="POST"
                                 enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <label for="">Jawaban</label>
                                     <textarea class="form-control" name="teks" id="text_siswa" cols="30" rows="5" wrap="hard">{{ $tugas_siswa->teks }}</textarea>
-                                </div>
+                                </div> --}}
                                 <div class="custom-file-container" data-upload-id="fileSiswa">
                                     <label>Upload File <a href="javascript:void(0)"
-                                            class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+                                            class="custom-file-container__image-clear" title="Clear Image">dalam format pdf</a></label>
                                     <label class="custom-file-container__custom-file file_materi">
                                         <input type="file" class="custom-file-container__custom-file__custom-file-input"
                                             name="files[]" multiple>

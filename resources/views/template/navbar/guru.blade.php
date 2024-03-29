@@ -35,20 +35,21 @@
                     </div>
                 </a>
             </li> --}}
-            {{-- <li class="menu {{ ($menu['menu'] == 'tugas') ? 'active' : ''; }}">
-                <a href="{{ url("/guru/tugas") }}" aria-expanded="{{ ($menu['expanded'] == 'tugas') ? 'true' : 'false'; }}" class="dropdown-toggle">
+            <li class="menu {{ $menu['menu'] == 'tugas' ? 'active' : '' }}">
+                <a href="{{ url('/guru/tugas') }}"
+                    aria-expanded="{{ $menu['expanded'] == 'tugas' ? 'true' : 'false' }}" class="dropdown-toggle">
                     <div class="">
                         <span data-feather="book"></span>
                         <span>Ujian Essay</span>
                     </div>
                 </a>
-            </li> --}}
+            </li>
             <li class="menu {{ $menu['menu'] == 'ujian' ? 'active' : '' }}">
-                <a href="{{ url('/guru/ujian') }}" aria-expanded="{{ $menu['expanded'] == 'ujian' ? 'true' : 'false' }}"
-                    class="dropdown-toggle">
+                <a href="{{ url('/guru/ujian') }}"
+                    aria-expanded="{{ $menu['expanded'] == 'ujian' ? 'true' : 'false' }}" class="dropdown-toggle">
                     <div class="">
                         <span data-feather="cast"></span>
-                        <span>Ujian</span>
+                        <span>Ujian PG</span>
                     </div>
                 </a>
             </li>

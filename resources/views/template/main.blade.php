@@ -103,7 +103,7 @@
             </ul>
             <ul class="navbar-item flex-row navbar-dropdown">
 
-                @if (session()->get('role') === 3)
+                {{-- @if (session()->get('role') === 3)
                     <li class="nav-item dropdown notification-dropdown">
                         <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                     </li>
-                @endif
+                @endif --}}
 
                 <li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown"

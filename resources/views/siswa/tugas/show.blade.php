@@ -35,9 +35,9 @@
                                 </tr>
                             </table>
                             <hr>
-                            <div style="overflow-wrap: break-word;">
+                            {{-- <div style="overflow-wrap: break-word;">
                                 {!! $tugas->teks !!}
-                            </div>
+                            </div> --}}
 
                             <hr>
                             @if ($files)
@@ -149,7 +149,6 @@
 
                                         {{-- cek apakah dia daftar sebelum tugas dibuat --}}
                                         @if ($tugas_siswa != null)
-
                                             {{-- cek apakah tugasnya sudah dikerjakan --}}
                                             @if ($tugas_siswa->date_send === null)
                                                 <p>Ujian Essay Belum Dikumpulkan. Segera dikumpulkan sebelum
@@ -181,13 +180,13 @@
                                                 {!! $tugas_siswa->catatan_guru === null ? '<p>Tidak ada</p>' : '<p>' . $tugas_siswa->catatan_guru . '</p>' !!}
 
                                                 {{-- cek apakah ada nilai, jika belum dinilia jawaban masih bisa di edit --}}
-                                                @if ($tugas_siswa->nilai === null)
+                                                {{-- @if ($tugas_siswa->nilai === null)
                                                     <a href="{{ url('/siswa/tugas/' . $tugas_siswa->kode . '/edit') }}"
                                                         class="btn btn-primary btn-sm btn-kerjakan">lihat / edit jawaban</a>
                                                 @else
                                                     <a href="{{ url('/siswa/tugas/' . $tugas_siswa->kode . '/edit') }}"
                                                         class="btn btn-primary btn-sm btn-kerjakan">lihat jawaban</a>
-                                                @endif
+                                                @endif --}}
                                             @endif
                                         @else
                                             <p>Anda tidak bisa mengerjakan tugas ini dikarenakan akun anda terdaftar setelah
